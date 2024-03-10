@@ -2,6 +2,8 @@ package com.mycompany.app;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class App
 {
@@ -67,7 +69,7 @@ public class App
         }
 
         if(duplicateSetting=='d'){
-           for(int i = 0; i<result.size(); i++){
+           for(int i = 0; i<result.size()-1; i++){
                for(int j = i+1; j<result.size(); j++){
                    if(result.get(i) == result.get(j)) {
                        result.remove(j);
@@ -84,26 +86,46 @@ public class App
 
         switch (sortSetting){
             case 'a': {
-
+                for(int i = 0; i<result.size()-1; i++){
+                    for(int j = i+1; j<result.size(); j++){
+                        if(result.get(i)>result.get(j)){
+                            int a = result.get(i);
+                            result.set(i, result.get(j));
+                            result.set(j,a);
+                        }
+                    }
+                }
+                break;
             }
             case 'd': {
-
+                for(int i = 0; i<result.size()-1; i++){
+                    for(int j = i+1; j<result.size(); j++){
+                        if(result.get(i)<result.get(j)){
+                            int a = result.get(i);
+                            result.set(i, result.get(j));
+                            result.set(j,a);
+                        }
+                    }
+                }
+                break;
             }
             case 'r': {
-
+                for(int i = 0; i<result.size()-1; i++){
+                    for(int j = i+1; j<result.size(); j++){
+                        if(result.get(i)<result.get(j)){
+                            int a = result.get(i);
+                            result.set(i, result.get(j));
+                            result.set(j,a);
+                        }
+                    }
+                }
             }
             case 'j':{
-
+                Collections.shuffle(result);
+                break;
             }
-
-
-
-
         }
 
-
-
-
-        return null;
+        return result;
     }
 }
