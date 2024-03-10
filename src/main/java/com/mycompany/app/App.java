@@ -11,7 +11,7 @@ public class App
     }
 
     public static ArrayList<Integer> mixture(ArrayList<Integer> list1, ArrayList<Integer> list2,
-                                             char sortSetting, char duplicateSetting, char errorSetting, char transformSetting, int mod){
+                                             char sortSetting, char duplicateSetting, char errorSetting, char transformSetting, int div){
         /*
 
         sortSetting:
@@ -25,9 +25,9 @@ public class App
 
         *transformSetting:
             p: make all elements >=0 (take negative ones' absolute value), n: if there are negative ones don't mess with them ,
-            s: shrink in mod of last int
+            s: shrink(divide) with last int
 
-        *mod is ignored by default. if transformSetting=s then it will be used
+        *div is ignored by default. if transformSetting=s then it will be used
          */
 
         ArrayList<Integer> result = new ArrayList<>();
@@ -60,10 +60,11 @@ public class App
         }
 
         if(transformSetting=='s'){
+            ArrayList<Integer> newres=new ArrayList<>();
             for(int a : result){
-                result.remove(a);
-                result.add(a%mod);
+                newres.add((int)(a/div));
             }
+            result=newres;
 
         }
 

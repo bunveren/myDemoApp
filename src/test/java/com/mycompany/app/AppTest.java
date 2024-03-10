@@ -42,7 +42,6 @@ public class AppTest
         ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1,1,2,3,3,4,5,5,7,9));
         ArrayList<Integer> actual = App.mixture(arl1,arl2,'a','c','n','n',0);
         assertTrue(expected.equals(actual));
-
     }
 
     public void testDuplicateSetting() {
@@ -53,31 +52,36 @@ public class AppTest
         assertTrue(expected.equals(actual));
     }
 
-    public void testErrorSetting() {
+    public void testErrorSetting1() {
         ArrayList<Integer> arl1 = null;
         ArrayList<Integer> arl2 = null;
-        ArrayList<Integer> expected = null;
         ArrayList<Integer> actual = App.mixture(arl1,arl2,'a','c','n','n',0);
-        assertTrue(expected.equals(actual));
+        assertTrue(actual==null);
+    }
 
-        arl1 = null;
-        arl2 = null;
-        expected = new ArrayList<Integer>();
-        actual = App.mixture(arl1,arl2,'a','c','s','n',0);
+    public void testErrorSetting2() {
+        ArrayList<Integer> arl1 = null;
+        ArrayList<Integer> arl2 = null;
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        ArrayList<Integer> actual = App.mixture(arl1,arl2,'a','c','s','n',0);
         assertTrue(expected.equals(actual));
     }
 
-    public void testTransformSetting() {
+
+    public void testTransformSetting1() {
         ArrayList<Integer> arl1 = new ArrayList<Integer>(Arrays.asList(-1,-3,-5,-7,-9));
         ArrayList<Integer> arl2 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
         ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1,1,2,3,3,4,5,5,7,9));
         ArrayList<Integer> actual = App.mixture(arl1,arl2,'a','c','n','p',0);
         assertTrue(expected.equals(actual));
 
-        arl1 = new ArrayList<Integer>(Arrays.asList(100,300,500,700,900));
-        arl2 = new ArrayList<Integer>(Arrays.asList(100,200,300,400,500));
-        expected = new ArrayList<Integer>(Arrays.asList(1,1,2,3,3,4,5,5,7,9));
-        actual = App.mixture(arl1,arl2,'a','c','n','s',100);
+    }
+
+    public void testTransformSetting2() {
+        ArrayList<Integer> arl1 = new ArrayList<Integer>(Arrays.asList(100,300,500,700,900));
+        ArrayList<Integer> arl2 = new ArrayList<Integer>(Arrays.asList(100,200,300,400,500));
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1,1,2,3,3,4,5,5,7,9));
+        ArrayList<Integer> actual = App.mixture(arl1,arl2,'a','c','n','s',100);
         assertTrue(expected.equals(actual));
     }
 
