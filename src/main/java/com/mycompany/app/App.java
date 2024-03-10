@@ -1,9 +1,7 @@
 package com.mycompany.app;
 
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class App
 {
@@ -26,7 +24,8 @@ public class App
             n: return null for some cases, s:won't return null ever(for sensitive usages)
 
         *transformSetting:
-            p: make all elements >=0 (take negative ones' absolute value), n: if there are negative ones don't mess with them , s: shrink in mod of last int
+            p: make all elements >=0 (take negative ones' absolute value), n: if there are negative ones don't mess with them ,
+            s: shrink in mod of last int
 
         *mod is ignored by default. if transformSetting=s then it will be used
          */
@@ -128,4 +127,6 @@ public class App
 
         return result;
     }
+
+
 }
