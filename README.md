@@ -8,3 +8,5 @@ transformSetting:
     p: make all elements >=0 (take negative ones' absolute value), n: if there are negative ones don't mess with them ,
     s: shrink(divide) with last int
 *div is ignored by default. if transformSetting=s then it will be used
+
+https://app.travis-ci.com/bunveren/myDemoApp.svg?token=y4kv32kBRnJCkNoxxhaR&branch=master
