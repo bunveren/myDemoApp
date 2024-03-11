@@ -21,25 +21,50 @@ public class App
         get("/", (req, res) -> "Hello, World");
 
         post("/compute", (req, res) -> {
-            //System.out.println(req.queryParams("input1"));
-            //System.out.println(req.queryParams("input2"));
-
             String input1 = req.queryParams("input1");
-            java.util.Scanner sc1 = new java.util.Scanner(input1);
-            sc1.useDelimiter("[;\r\n]+");
-            java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
-            while (sc1.hasNext())
+            java.util.Scanner sc = new java.util.Scanner(input1);
+            sc.useDelimiter("[;\r\n]+");
+            java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
+            while (sc.hasNext())
             {
-                int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
-                inputList.add(value);
+                int value = Integer.parseInt(sc.next().replaceAll("\\s",""));
+                inputList1.add(value);
             }
-            System.out.println(inputList);
 
+            String input2 = req.queryParams("input2");
+            sc = new java.util.Scanner(input2);
+            sc.useDelimiter("[;\r\n]+");
+            java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
+            while (sc.hasNext())
+            {
+                int value = Integer.parseInt(sc.next().replaceAll("\\s",""));
+                inputList2.add(value);
+            }
 
-            String input2 = req.queryParams("input2").replaceAll("\\s","");
-            int input2AsInt = Integer.parseInt(input2);
+            String input3 = req.queryParams("input3");
+            sc = new java.util.Scanner(input3);
+            char ch1 = sc.next().charAt(0);
 
-            boolean result = true; //todo wth
+            String input4 = req.queryParams("input4");
+            sc = new java.util.Scanner(input4);
+            char ch2 = sc.next().charAt(0);
+
+            String input5 = req.queryParams("input5");
+            sc = new java.util.Scanner(input5);
+            char ch3 = sc.next().charAt(0);
+
+            String input6 = req.queryParams("input6");
+            sc = new java.util.Scanner(input6);
+            char ch4 = sc.next().charAt(0);
+
+            String input7 = req.queryParams("input7");
+            sc = new java.util.Scanner(input3);
+            int in1 = sc.nextInt();
+
+            //inputs:  inputList1, inputList2, ch1, ch2, ch3, ch4, in1
+
+            ArrayList<Integer> result = App.mixture(inputList1,inputList2,
+                    ch1,ch2,ch3,ch4,in1);
 
             Map map = new HashMap();
             map.put("result", result);
