@@ -35,7 +35,7 @@ public class App
             java.util.Scanner sc2 = new java.util.Scanner(input2);
             sc2.useDelimiter("[;\r\n]+");
             java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
-            while (sc.hasNext())
+            while (sc2.hasNext())
             {
                 int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
                 inputList2.add(value);
