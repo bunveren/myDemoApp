@@ -1,28 +1,40 @@
-<title>My CI-CD HW</title>
-  <h1>Compute Method Interface</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CI-CD HW</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Compute Method Interface</h1>
     <br>
-    <center>Please enter the needed parameters to compute with 2 array lists.</center>
+    <p style="text-align: center;">Please enter the needed parameters to compute with 2 array lists.</p>
     <br>
-    <center>Resulting array list: {{result}}</center>
+    <p style="text-align: center;">Resulting array list: {{result}}</p>
     <br>
+    <form action="compute" method="post" style="text-align: center;">
+        <label for="input1">The first array list:</label><br>
+        <textarea name="input1" rows="10" cols="30"></textarea><br><br>
 
+        <label for="input2">The second array list:</label><br>
+        <textarea name="input2" rows="10" cols="30"></textarea><br><br>
 
-  <form action="compute" method="post">
-        <center><label for="story">The first array list: </label>
-        <textarea name="input1" rows="10" cols="30"></textarea>
-        <center><label for="story">The second array list: </label>
-        <textarea name="input2" rows="10" cols="30"></textarea>
-        <br>
-        <center><label for="story">Char for sort setting (a-d-r-j): </label>
-        <textarea name="input3" rows="2" cols="5"></textarea>
-        <center><label for="story">Char for duplicate setting (c-d): </label>
-        <textarea name="input4" rows="2" cols="5"></textarea>
-        <center><label for="story">Char for error setting (n-s): </label>
-        <textarea name="input5" rows="2" cols="5"></textarea>
-        <center><label for="story">Char for transform setting (p-n-s): </label>
-        <textarea name="input6" rows="2" cols="5"></textarea>
-        <center><label for="story">Int for divisor in transform setting: </label>
-        <textarea name="input7" rows="2" cols="10"></textarea>
-        <br>
+        <label for="input3">Char for sort setting (a-d-r-j):</label><br>
+        <textarea name="input3" rows="2" cols="5"></textarea><br><br>
+
+        <label for="input4">Char for duplicate setting (c-d):</label><br>
+        <textarea name="input4" rows="2" cols="5"></textarea><br><br>
+
+        <label for="input5">Char for error setting (n-s):</label><br>
+        <textarea name="input5" rows="2" cols="5"></textarea><br><br>
+
+        <label for="input6">Char for transform setting (p-n-s):</label><br>
+        <textarea name="input6" rows="2" cols="5"></textarea><br><br>
+
+        <label for="input7">Int for divisor in transform setting:</label><br>
+        <textarea name="input7" rows="2" cols="10"></textarea><br><br>
+
         <input type="submit">
-  </form>
+    </form>
+</body>
+</html>

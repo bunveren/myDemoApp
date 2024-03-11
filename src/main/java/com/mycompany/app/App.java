@@ -9,7 +9,6 @@ import java.util.Map;
 
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
-//en son heroku local -p 3000de kaldım
 
 import java.util.*;
 
