@@ -10,3 +10,5 @@ transformSetting:
 *div is ignored by default. if transformSetting=s then it will be used
 
 https://app.travis-ci.com/bunveren/myDemoApp.svg?token=y4kv32kBRnJCkNoxxhaR&branch=master
+
+Demo site: https://immense-brook-89356-d68ddffc23d7.herokuapp.com/
