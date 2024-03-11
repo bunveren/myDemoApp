@@ -18,7 +18,7 @@ public class App
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
-        get("/", (req, res) -> "Hello, World");
+        get("/", (req, res) -> "To use my compute method, please add /compute to the URL");
 
         post("/compute", (req, res) -> {
             String input1 = req.queryParams("input1");

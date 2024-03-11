@@ -1,17 +1,27 @@
-<title>My CI-CD</title>
+<title>My CI-CD HW</title>
   <h1>Compute Method Interface</h1>
-    Result is {{result}}
+    <br>
+    <center>Please enter the needed parameters to compute with 2 array lists.</center>
+    <br>
+    <center>Resulting array list: {{result}}</center>
+    <br>
 
 
   <form action="compute" method="post">
+        <center><label for="story">The first array list: </label>
         <textarea name="input1" rows="10" cols="30"></textarea>
+        <center><label for="story">The second array list: </label>
         <textarea name="input2" rows="10" cols="30"></textarea>
-
+        <br>
+        <center><label for="story">Char for sort setting (a-d-r-j): </label>
         <textarea name="input3" rows="2" cols="5"></textarea>
+        <center><label for="story">Char for duplicate setting (c-d): </label>
         <textarea name="input4" rows="2" cols="5"></textarea>
+        <center><label for="story">Char for error setting (n-s): </label>
         <textarea name="input5" rows="2" cols="5"></textarea>
+        <center><label for="story">Char for transform setting (p-n-s): </label>
         <textarea name="input6" rows="2" cols="5"></textarea>
-
+        <center><label for="story">Int for divisor in transform setting: </label>
         <textarea name="input7" rows="2" cols="10"></textarea>
         <br>
         <input type="submit">
