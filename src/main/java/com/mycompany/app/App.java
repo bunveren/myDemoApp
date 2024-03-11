@@ -32,34 +32,34 @@ public class App
             }
 
             String input2 = req.queryParams("input2");
-            sc = new java.util.Scanner(input2);
-            sc.useDelimiter("[;\r\n]+");
+            java.util.Scanner sc2 = new java.util.Scanner(input2);
+            sc2.useDelimiter("[;\r\n]+");
             java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
             while (sc.hasNext())
             {
-                int value = Integer.parseInt(sc.next().replaceAll("\\s",""));
+                int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
                 inputList2.add(value);
             }
 
             String input3 = req.queryParams("input3");
-            sc = new java.util.Scanner(input3);
-            char ch1 = sc.next().charAt(0);
+            java.util.Scanner sc3 = new java.util.Scanner(input3);
+            char ch1 = sc3.next().charAt(0);
 
             String input4 = req.queryParams("input4");
-            sc = new java.util.Scanner(input4);
-            char ch2 = sc.next().charAt(0);
+            java.util.Scanner sc4 = new java.util.Scanner(input4);
+            char ch2 = sc4.next().charAt(0);
 
             String input5 = req.queryParams("input5");
-            sc = new java.util.Scanner(input5);
-            char ch3 = sc.next().charAt(0);
+            java.util.Scanner sc5 = new java.util.Scanner(input5);
+            char ch3 = sc5.next().charAt(0);
 
             String input6 = req.queryParams("input6");
-            sc = new java.util.Scanner(input6);
-            char ch4 = sc.next().charAt(0);
+            java.util.Scanner sc6 = new java.util.Scanner(input6);
+            char ch4 = sc6.next().charAt(0);
 
             String input7 = req.queryParams("input7");
-            sc = new java.util.Scanner(input3);
-            int in1 = sc.nextInt();
+            java.util.Scanner sc7 = new java.util.Scanner(input7);
+            int in1 = sc7.nextInt();
 
             //inputs:  inputList1, inputList2, ch1, ch2, ch3, ch4, in1
 
