@@ -20,50 +20,61 @@ public class App
         get("/", (req, res) -> "To use my compute method, please add /compute to the URL");
 
         post("/compute", (req, res) -> {
-            String input1 = req.queryParams("input1");
-            java.util.Scanner sc = new java.util.Scanner(input1);
-            sc.useDelimiter("[;\r\n]+");
-            java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
-            while (sc.hasNext())
-            {
-                int value = Integer.parseInt(sc.next().replaceAll("\\s",""));
-                inputList1.add(value);
+
+            ArrayList<Integer> result = null;
+
+            try {
+
+
+                String input1 = req.queryParams("input1");
+                java.util.Scanner sc = new java.util.Scanner(input1);
+                sc.useDelimiter("[;\r\n]+");
+                java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
+                while (sc.hasNext())
+                {
+                    int value = Integer.parseInt(sc.next().replaceAll("\\s",""));
+                    inputList1.add(value);
+                }
+
+                String input2 = req.queryParams("input2");
+                java.util.Scanner sc2 = new java.util.Scanner(input2);
+                sc2.useDelimiter("[;\r\n]+");
+                java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
+                while (sc2.hasNext())
+                {
+                    int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
+                    inputList2.add(value);
+                }
+
+                String input3 = req.queryParams("input3");
+                java.util.Scanner sc3 = new java.util.Scanner(input3);
+                char ch1 = sc3.next().charAt(0);
+
+                String input4 = req.queryParams("input4");
+                java.util.Scanner sc4 = new java.util.Scanner(input4);
+                char ch2 = sc4.next().charAt(0);
+
+                String input5 = req.queryParams("input5");
+                java.util.Scanner sc5 = new java.util.Scanner(input5);
+                char ch3 = sc5.next().charAt(0);
+
+                String input6 = req.queryParams("input6");
+                java.util.Scanner sc6 = new java.util.Scanner(input6);
+                char ch4 = sc6.next().charAt(0);
+
+                String input7 = req.queryParams("input7");
+                java.util.Scanner sc7 = new java.util.Scanner(input7);
+                int in1 = sc7.nextInt();
+
+                //inputs:  inputList1, inputList2, ch1, ch2, ch3, ch4, in1
+
+                result = App.mixture(inputList1,inputList2,
+                        ch1,ch2,ch3,ch4,in1);
+
+            }catch (Exception e){
+                result = null;
             }
 
-            String input2 = req.queryParams("input2");
-            java.util.Scanner sc2 = new java.util.Scanner(input2);
-            sc2.useDelimiter("[;\r\n]+");
-            java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
-            while (sc2.hasNext())
-            {
-                int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
-                inputList2.add(value);
-            }
-
-            String input3 = req.queryParams("input3");
-            java.util.Scanner sc3 = new java.util.Scanner(input3);
-            char ch1 = sc3.next().charAt(0);
-
-            String input4 = req.queryParams("input4");
-            java.util.Scanner sc4 = new java.util.Scanner(input4);
-            char ch2 = sc4.next().charAt(0);
-
-            String input5 = req.queryParams("input5");
-            java.util.Scanner sc5 = new java.util.Scanner(input5);
-            char ch3 = sc5.next().charAt(0);
-
-            String input6 = req.queryParams("input6");
-            java.util.Scanner sc6 = new java.util.Scanner(input6);
-            char ch4 = sc6.next().charAt(0);
-
-            String input7 = req.queryParams("input7");
-            java.util.Scanner sc7 = new java.util.Scanner(input7);
-            int in1 = sc7.nextInt();
-
-            //inputs:  inputList1, inputList2, ch1, ch2, ch3, ch4, in1
-
-            ArrayList<Integer> result = App.mixture(inputList1,inputList2,
-                    ch1,ch2,ch3,ch4,in1);
 
             Map map = new HashMap();
             map.put("result", result);
@@ -88,18 +99,21 @@ public class App
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-
     public static ArrayList<Integer> mixture(ArrayList<Integer> list1, ArrayList<Integer> list2,
-                                             char sortSetting, char duplicateSetting, char errorSetting, char transformSetting, int div){
+        char sortSetting, char duplicateSetting, char errorSetting, char transformSetting, int div){
+
+        if((sortSetting!='a' && sortSetting!='d' && sortSetting!='r' && sortSetting!='j') ||
+            (duplicateSetting!='c' && duplicateSetting!='d') ||
+            (errorSetting!='n' && errorSetting!='s') ||
+            (transformSetting!='p' && transformSetting!='n' &&  transformSetting!='s')
+        ) return null;
 
 
         ArrayList<Integer> result = new ArrayList<>();
 
         if((list1==null || list1.isEmpty()) && (list2==null || list2.isEmpty())){
-
             if(errorSetting=='s') return result;
             else return null;
-
         }
 
         if(transformSetting=='p'){
