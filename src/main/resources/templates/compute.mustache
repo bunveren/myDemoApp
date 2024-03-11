@@ -36,5 +36,45 @@
 
         <input type="submit">
     </form>
+
+    <h2 style="text-align: center;">README</h2>
+    <p>
+        Made a basic computing method that works with two arrays and merges them with the help of parameters.
+        All the parameters are assumed to be filled with proper types.
+    </p>
+    <h3>Parameters</h3>
+    <ul>
+        <li><strong>sortSetting:</strong>
+            <ul>
+                <li>a: ascending</li>
+                <li>d: descending</li>
+                <li>r: randomize</li>
+                <li>j: just concat</li>
+            </ul>
+        </li>
+        <li><strong>duplicateSetting:</strong>
+            <ul>
+                <li>c: care for duplicates (put all of them)</li>
+                <li>d: don't care for duplicates (take one in the resulting list only)</li>
+            </ul>
+        </li>
+        <li><strong>errorSetting:</strong>
+            <ul>
+                <li>n: return null for some cases</li>
+                <li>s: won't return null ever (for sensitive usages)</li>
+            </ul>
+        </li>
+        <li><strong>transformSetting:</strong>
+            <ul>
+                <li>p: make all elements >= 0 (take negative ones' absolute value)</li>
+                <li>n: if there are negative ones don't mess with them</li>
+                <li>s: shrink (divide) with last int</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        The integer parameter div is ignored by default but needs to be filled with an integer.
+        If transformSetting is s, then it will be used.
+    </p>
 </body>
 </html>
