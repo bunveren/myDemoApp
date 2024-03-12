@@ -23,6 +23,6 @@ transformSetting:
 the int parameter div is ignored by default but needs to be filled with an int,
 if transformSetting==s then it will be used
 
-https://app.travis-ci.com/bunveren/myDemoApp.svg?token=y4kv32kBRnJCkNoxxhaR&branch=master
+[![Build Status](https://app.travis-ci.com/bunveren/myDemoApp.svg?token=y4kv32kBRnJCkNoxxhaR&branch=master)](https://app.travis-ci.com/bunveren/myDemoApp)
 
 Demo site: https://immense-brook-89356-d68ddffc23d7.herokuapp.com/
